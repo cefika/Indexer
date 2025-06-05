@@ -17,9 +17,8 @@ app.get("/meta-addresses/:chainName", getMetaAddressesByChain);
 
 app.listen(PORT, () => {
   console.log(`🚀 API is running on http://localhost:${PORT}`);
-
-  // Ovde startuj sve listenere
   console.log("🔄 Starting blockchain event listeners...\n");
+  
   startSepoliaListener();
   startNeonListener();
   startFlareListener();

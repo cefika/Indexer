@@ -6,9 +6,9 @@ export const parseAndStoreLog = async (log, iface, chainName) => {
     let parsed;
 
     if (log.name && log.args) {
-      parsed = log; // već parsirano iz ethers `contract.on`
+      parsed = log;
     } else {
-      parsed = iface.parseLog(log); // klasičan log iz queryFilter
+      parsed = iface.parseLog(log); 
     }
 
     if (parsed.name === "Announcement") {
